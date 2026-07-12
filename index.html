@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric AI — AI Powered Electricity Bill Prediction</title>
+<meta name="description" content="Predict your next electricity bill with AI. Electric AI uses machine learning to forecast bills and analyze consumption trends.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+/* =========================================================
+   Electric AI — Stylesheet
+   Theme: Deep navy background with electric blue + voltage yellow
+========================================================= */
+
+:root {
+  --navy-950: #060b18;
+  --navy-900: #0b1426;
+  --navy-800: #101d38;
+  --navy-700: #16274a;
+  --blue-400: #38bdf8;
+  --blue-500: #0ea5e9;
+  --blue-600: #0284c7;
+  --yellow-400: #ffd100;
+  --yellow-300: #ffe14d;
+  --white: #f4f8ff;
+  --gray-300: #b9c6de;
+  --gray-500: #7c8aa8;
+  --danger: #ff5d6c;
+  --success: #34d399;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.35);
+  --shadow-yellow-glow: 0 0 25px rgba(255, 209, 0, 0.35);
+  --font-main: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--navy-950);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; }
+input, textarea { font-family: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--yellow-400);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--white), var(--blue-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-desc {
+  color: var(--gray-300);
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+section { padding: 90px 0; position: relative; }
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--yellow-400), var(--yellow-300));
+  color: var(--navy-950);
+  box-shadow: var(--shadow-yellow-glow);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 35px rgba(255, 209, 0, 0.55); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--blue-400);
+}
+.btn-outline:hover {
+  background: rgba(56, 189, 248, 0.12);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-block { width: 100%; }
+.btn-sm { padding: 10px 20px; font-size: 0.85rem; }
+
+/* =========================================================
+   Header / Navbar
+========================================================= */
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(6, 11, 24, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  transition: background 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 10px rgba(255, 209, 0, 0.6));
+}
+
+.brand span.highlight { color: var(--yellow-400); }
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--gray-300);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: linear-gradient(90deg, var(--blue-400), var(--yellow-400));
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-actions { display: flex; align-items: center; gap: 14px; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 6px;
+}
+.hamburger span {
+  width: 24px; height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* =========================================================
+   Hero Section — Lightning Animation
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(255, 209, 0, 0.12), transparent 45%),
+    var(--navy-950);
+}
+
+.hero-bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  z-index: 1;
+}
+
+.bolt {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 12px rgba(255, 209, 0, 0.9)) drop-shadow(0 0 22px rgba(56, 189, 248, 0.6));
+  z-index: 1;
+}
+.bolt.b1 { top: 8%; left: 12%; width: 60px; animation: flash 5.5s ease-in-out infinite; }
+.bolt.b2 { top: 15%; right: 15%; width: 80px; animation: flash 6.5s ease-in-out infinite 1.2s; }
+.bolt.b3 { bottom: 12%; left: 22%; width: 50px; animation: flash 4.5s ease-in-out infinite 2.4s; }
+.bolt.b4 { bottom: 20%; right: 10%; width: 70px; animation: flash 7s ease-in-out infinite 0.6s; }
+
+@keyframes flash {
+  0%, 92%, 100% { opacity: 0; transform: scale(0.9) rotate(0deg); }
+  93% { opacity: 1; transform: scale(1.05) rotate(-2deg); }
+  95% { opacity: 0.3; }
+  96% { opacity: 1; transform: scale(1) rotate(2deg); }
+  98% { opacity: 0; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-text .section-tag { display: inline-flex; align-items: center; gap: 8px; }
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+}
+
+.hero-title .accent {
+  background: linear-gradient(90deg, var(--yellow-400), var(--blue-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  color: var(--gray-300);
+  font-size: 1.1rem;
+  max-width: 520px;
+  margin-bottom: 34px;
+}
+
+.hero-ctas { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.hero-stats {
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+.hero-stats .stat strong {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--yellow-400);
+  font-weight: 800;
+}
+.hero-stats .stat span {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hero visual — animated meter card */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meter-card {
+  background: linear-gradient(160deg, rgba(16, 29, 56, 0.9), rgba(11, 20, 38, 0.9));
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: var(--shadow-glow);
+  animation: floaty 5s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.meter-card h4 { font-size: 0.9rem; color: var(--gray-300); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+.meter-value { font-size: 2.6rem; font-weight: 900; color: var(--yellow-400); margin-bottom: 18px; }
+.meter-value span { font-size: 1rem; color: var(--gray-500); font-weight: 500; }
+
+.mini-bar-row { display: flex; align-items: flex-end; gap: 8px; height: 90px; margin-bottom: 18px; }
+.mini-bar {
+  flex: 1;
+  background: linear-gradient(180deg, var(--blue-400), var(--blue-600));
+  border-radius: 4px 4px 0 0;
+  animation: growBar 2.4s ease-in-out infinite alternate;
+}
+.mini-bar:nth-child(2) { background: linear-gradient(180deg, var(--yellow-400), var(--yellow-300)); animation-delay: 0.2s; }
+.mini-bar:nth-child(3) { animation-delay: 0.4s; }
+.mini-bar:nth-child(4) { background: linear-gradient(180deg, var(--yellow-400), var(--yellow-300)); animation-delay: 0.6s; }
+.mini-bar:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes growBar {
+  0% { height: 30%; }
+  100% { height: 100%; }
+}
+
+.meter-footer { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--gray-500); }
+.pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--success);
+  display: inline-block;
+  margin-right: 6px;
+  box-shadow: 0 0 0 rgba(52, 211, 153, 0.6);
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  color: var(--gray-500);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+.scroll-cue .chevron {
+  width: 10px; height: 10px;
+  border-right: 2px solid var(--blue-400);
+  border-bottom: 2px solid var(--blue-400);
+  transform: rotate(45deg);
+  animation: bounce 1.6s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: rotate(45deg) translate(0,0); opacity: 0.4; }
+  50% { transform: rotate(45deg) translate(4px, 4px); opacity: 1; }
+}
+
+/* =========================================================
+   About Section
+========================================================= */
+
+.about { background: var(--navy-900); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-points { display: flex; flex-direction: column; gap: 20px; margin-top: 24px; }
+.about-point { display: flex; gap: 16px; align-items: flex-start; }
+.about-point .icon-box {
+  min-width: 46px; height: 46px;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+.about-point h4 { margin-bottom: 4px; font-size: 1.05rem; }
+.about-point p { color: var(--gray-300); font-size: 0.92rem; }
+
+.about-visual {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid rgba(255, 209, 0, 0.15);
+  position: relative;
+}
+
+.about-visual .why-ai-list { display: flex; flex-direction: column; gap: 16px; }
+.why-ai-item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border-left: 3px solid var(--yellow-400); }
+.why-ai-item .num { font-weight: 900; color: var(--yellow-400); font-size: 1.1rem; }
+
+/* =========================================================
+   Features Section
+========================================================= */
+
+.features { background: var(--navy-950); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: linear-gradient(160deg, rgba(16, 29, 56, 0.75), rgba(11, 20, 38, 0.75));
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: var(--radius-md);
+  padding: 32px 26px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(56,189,248,0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--blue-400);
+}
+.feature-card:hover::before { opacity: 1; }
+
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  display: inline-block;
+  filter: drop-shadow(0 0 10px rgba(255, 209, 0, 0.5));
+}
+
+.feature-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.feature-card p { color: var(--gray-300); font-size: 0.9rem; }
+
+/* =========================================================
+   Prediction Section
+========================================================= */
+
+.prediction { background: var(--navy-900); }
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.predict-form {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.form-group { margin-bottom: 22px; }
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-300);
+  margin-bottom: 8px;
+}
+.form-group label .unit { color: var(--gray-500); font-weight: 400; }
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--white);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: var(--blue-400);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+.form-group .error-msg {
+  color: var(--danger);
+  font-size: 0.78rem;
+  margin-top: 6px;
+  display: none;
+}
+.form-group.invalid input { border-color: var(--danger); }
+.form-group.invalid .error-msg { display: block; }
+
+.predict-btn {
+  width: 100%;
+  padding: 17px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--yellow-400), var(--yellow-300));
+  color: var(--navy-950);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-yellow-glow);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.predict-btn:hover { transform: translateY(-3px); }
+.predict-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(6, 11, 24, 0.3);
+  border-top-color: var(--navy-950);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+.predict-btn.loading .spinner { display: inline-block; }
+.predict-btn.loading .btn-label { opacity: 0.7; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Prediction result panel */
+.result-panel {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid rgba(255, 209, 0, 0.2);
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-placeholder {
+  text-align: center;
+  color: var(--gray-500);
+}
+.result-placeholder .ph-icon {
+  font-size: 3rem;
+  margin-bottom: 14px;
+  opacity: 0.6;
+}
+
+.result-content { display: none; }
+.result-content.active { display: block; animation: fadeInUp 0.5s ease; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-amount-box { text-align: center; margin-bottom: 26px; }
+.result-amount-box .label { color: var(--gray-300); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+.result-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--yellow-400);
+  text-shadow: 0 0 25px rgba(255, 209, 0, 0.4);
+}
+
+.result-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.result-meta-item {
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  text-align: center;
+}
+.result-meta-item .val { font-size: 1.2rem; font-weight: 700; color: var(--blue-400); }
+.result-meta-item .lbl { font-size: 0.75rem; color: var(--gray-500); margin-top: 2px; }
+
+.tips-box { background: rgba(255, 209, 0, 0.06); border: 1px solid rgba(255,209,0,0.2); border-radius: var(--radius-sm); padding: 18px; }
+.tips-box h5 { font-size: 0.85rem; margin-bottom: 10px; color: var(--yellow-400); }
+.tips-box ul { display: flex; flex-direction: column; gap: 8px; }
+.tips-box li { font-size: 0.85rem; color: var(--gray-300); padding-left: 18px; position: relative; }
+.tips-box li::before { content: '⚡'; position: absolute; left: 0; }
+
+/* =========================================================
+   History Section
+========================================================= */
+
+.history { background: var(--navy-950); }
+
+.history-table-wrap {
+  background: var(--navy-800);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  overflow: hidden;
+}
+
+table.history-table { width: 100%; border-collapse: collapse; }
+table.history-table th {
+  text-align: left;
+  padding: 18px 24px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-500);
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+table.history-table td {
+  padding: 18px 24px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--gray-300);
+}
+table.history-table tr:last-child td { border-bottom: none; }
+table.history-table tr:hover td { background: rgba(56, 189, 248, 0.04); }
+
+.status-pill {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.status-pill.paid { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+.status-pill.due { background: rgba(255, 209, 0, 0.15); color: var(--yellow-400); }
+
+.chart-wrap {
+  margin-top: 40px;
+  background: var(--navy-800);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 30px;
+}
+.chart-wrap h4 { margin-bottom: 20px; font-size: 1rem; color: var(--gray-300); }
+.chart-canvas-box { position: relative; height: 320px; }
+
+/* =========================================================
+   Notifications Section
+========================================================= */
+
+.notifications { background: var(--navy-900); }
+
+.notif-list { display: flex; flex-direction: column; gap: 16px; }
+.notif-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border: 1px solid rgba(255, 209, 0, 0.2);
+  border-radius: var(--radius-md);
+  padding: 22px 26px;
+}
+.notif-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 209, 0, 0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.notif-body { flex: 1; }
+.notif-body h4 { font-size: 1rem; margin-bottom: 4px; }
+.notif-body p { font-size: 0.85rem; color: var(--gray-300); }
+.notif-meta { text-align: right; }
+.notif-meta .amt { font-size: 1.3rem; font-weight: 800; color: var(--yellow-400); }
+.notif-meta .due { font-size: 0.78rem; color: var(--gray-500); }
+
+/* =========================================================
+   Contact Section
+========================================================= */
+
+.contact { background: var(--navy-950); }
+
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; }
+
+.contact-info { display: flex; flex-direction: column; gap: 22px; margin-top: 20px; }
+.contact-info-item { display: flex; gap: 16px; align-items: center; }
+.contact-info-item .icon-box {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.contact-info-item h4 { font-size: 0.95rem; }
+.contact-info-item p { font-size: 0.85rem; color: var(--gray-300); }
+
+.contact-form {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--white);
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 130px;
+}
+.contact-form textarea:focus { outline: none; border-color: var(--blue-400); }
+
+.form-status-msg {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  display: none;
+}
+.form-status-msg.show { display: block; }
+.form-status-msg.success { background: rgba(52, 211, 153, 0.12); color: var(--success); border: 1px solid rgba(52,211,153,0.3); }
+.form-status-msg.error { background: rgba(255, 93, 108, 0.12); color: var(--danger); border: 1px solid rgba(255,93,108,0.3); }
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.site-footer {
+  background: var(--navy-900);
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 70px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand .brand { margin-bottom: 14px; }
+.footer-brand p { color: var(--gray-300); font-size: 0.88rem; max-width: 320px; margin-bottom: 20px; }
+
+.social-links { display: flex; gap: 12px; }
+.social-links a {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+.social-links a:hover { background: var(--blue-500); transform: translateY(-3px); }
+
+.footer-col h5 { font-size: 0.9rem; margin-bottom: 18px; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { font-size: 0.88rem; color: var(--gray-300); transition: color 0.2s ease; }
+.footer-col a:hover { color: var(--yellow-400); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--gray-500);
+}
+.footer-bottom .legal-links { display: flex; gap: 20px; }
+.footer-bottom a:hover { color: var(--blue-400); }
+
+/* =========================================================
+   Modal (Login / Signup)
+========================================================= */
+
+.auth-mode-switch {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.auth-mode-switch .mode-btn {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: var(--gray-300);
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.auth-mode-switch .mode-btn.active {
+  background: linear-gradient(90deg, var(--yellow-400), var(--yellow-300));
+  color: var(--navy-950);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 11, 24, 0.75);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+.modal-overlay.active { display: flex; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-box {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-700));
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray-300);
+  font-size: 1rem;
+}
+.modal-close:hover { background: rgba(255,255,255,0.12); }
+
+.modal-box h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.modal-box p.sub { color: var(--gray-300); font-size: 0.88rem; margin-bottom: 28px; }
+
+.google-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--navy-950);
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  transition: transform 0.2s ease;
+}
+.google-btn:hover { transform: translateY(-2px); }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+  color: var(--gray-500);
+  font-size: 0.8rem;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.modal-box .form-group input { background: rgba(255,255,255,0.05); }
+
+.modal-switch { text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--gray-300); }
+.modal-switch a { color: var(--blue-400); font-weight: 600; }
+
+/* =========================================================
+   Toast
+========================================================= */
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--navy-800);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: 3000;
+  max-width: 340px;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { border-color: rgba(52, 211, 153, 0.4); }
+.toast.error { border-color: rgba(255, 93, 108, 0.4); }
+.toast .toast-icon { font-size: 1.3rem; }
+.toast .toast-text { font-size: 0.88rem; color: var(--gray-300); }
+
+/* =========================================================
+   Reveal on scroll
+========================================================= */
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 980px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; max-width: 380px; margin: 0 auto; }
+  .about-grid, .prediction-grid, .contact-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.mobile-open {
+    display: flex;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--navy-900);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 18px;
+    border-bottom: 1px solid rgba(56,189,248,0.15);
+  }
+  .features-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  section { padding: 60px 0; }
+  .result-meta-grid { grid-template-columns: 1fr 1fr; }
+  table.history-table { font-size: 0.8rem; }
+  table.history-table th, table.history-table td { padding: 12px; }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas { flex-direction: column; }
+  .btn { width: 100%; }
+  .hero-stats { gap: 20px; }
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header class="site-header">
+  <nav class="navbar">
+    <a href="#home" class="brand">
+      <img src="data:image/png;base64,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" alt="Electric AI logo">
+      <span>Electric <span class="highlight">AI</span></span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#prediction">Bill Prediction</a></li>
+      <li><a href="#history">Consumption Analysis</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="loginBtn">Login / Sign up</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero" id="home">
+  <canvas class="hero-bg-canvas" id="lightningCanvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+
+  <!-- Decorative lightning bolts -->
+  <svg class="bolt b1" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="#FFD100"/></svg>
+  <svg class="bolt b2" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="#38BDF8"/></svg>
+  <svg class="bolt b3" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="#FFD100"/></svg>
+  <svg class="bolt b4" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z" fill="#38BDF8"/></svg>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="section-tag">⚡ AI-Powered Energy Intelligence</span>
+      <h1 class="hero-title">AI Powered Electricity Bill <span class="accent">Prediction</span> and Consumption Analysis</h1>
+      <p class="hero-sub">Predict Your Next Electricity Bill with Artificial Intelligence — before it even arrives. Understand your usage, save money, and stay ahead of every billing cycle.</p>
+      <div class="hero-ctas">
+        <a href="#prediction" class="btn btn-primary">Get Started</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>99.9%</strong><span>Model Accuracy (R²)</span></div>
+        <div class="stat"><strong>10K+</strong><span>Bills Predicted</span></div>
+        <div class="stat"><strong>24/7</strong><span>Smart Monitoring</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="meter-card">
+        <h4>Estimated Bill This Month</h4>
+        <div class="meter-value">₹1,284<span>.50</span></div>
+        <div class="mini-bar-row">
+          <div class="mini-bar"></div>
+          <div class="mini-bar"></div>
+          <div class="mini-bar"></div>
+          <div class="mini-bar"></div>
+          <div class="mini-bar"></div>
+        </div>
+        <div class="meter-footer">
+          <span><i class="pulse-dot"></i>Live tracking</span>
+          <span>Updated just now</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll to explore</span><span class="chevron"></span></div>
+</section>
+
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="section-tag">About Electric AI</span>
+        <h2 class="section-title">Know Your Bill Before It Knows You</h2>
+        <p class="section-desc">Electric AI is an intelligent energy companion that forecasts your electricity bill using machine learning — analyzing your consumption patterns, household size, and daily usage habits to give you an accurate prediction before your actual bill arrives.</p>
+
+        <div class="about-points">
+          <div class="about-point">
+            <div class="icon-box">🎯</div>
+            <div>
+              <h4>Our Objective</h4>
+              <p>Empower households to plan finances better by removing billing surprises through predictive analytics.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <div class="icon-box">💰</div>
+            <div>
+              <h4>Real Benefits</h4>
+              <p>Avoid billing shocks, identify wasteful consumption early, and make informed decisions to reduce costs.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <div class="icon-box">🧠</div>
+            <div>
+              <h4>Why AI?</h4>
+              <p>Traditional estimations ignore behavioral patterns. Our linear regression model learns from real consumption data to deliver precise, personalized forecasts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual reveal">
+        <h3 style="margin-bottom:20px;">Why Machine Learning?</h3>
+        <div class="why-ai-list">
+          <div class="why-ai-item"><span class="num">01</span><span>Learns from thousands of consumption data points</span></div>
+          <div class="why-ai-item"><span class="num">02</span><span>Accounts for household size &amp; daily usage hours</span></div>
+          <div class="why-ai-item"><span class="num">03</span><span>Continuously improves prediction accuracy</span></div>
+          <div class="why-ai-item"><span class="num">04</span><span>Delivers instant, data-driven forecasts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURES SECTION
+============================================================ -->
+<section class="features" id="features">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">What We Offer</span>
+    <h2 class="section-title center">Powerful Features</h2>
+    <p class="section-desc center">Everything you need to understand, predict, and control your electricity consumption — in one intelligent dashboard.</p>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">⚡</span>
+        <h3>AI Bill Prediction</h3>
+        <p>Get accurate bill forecasts powered by a trained linear regression model based on your real usage patterns.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📊</span>
+        <h3>Usage Analysis</h3>
+        <p>Visualize how your consumption units translate into cost with clear, interactive breakdowns.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📈</span>
+        <h3>Monthly Trends</h3>
+        <p>Track how your electricity usage and spending evolve month over month with dynamic charts.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">💡</span>
+        <h3>Energy Saving Tips</h3>
+        <p>Receive personalized, AI-generated recommendations to lower your consumption and save money.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📄</span>
+        <h3>Bill History</h3>
+        <p>Access a complete, organized record of your past bills, payments, and consumption units.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🤖</span>
+        <h3>Smart Recommendations</h3>
+        <p>Our AI continuously analyzes your habits to suggest the best ways to optimize energy use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BILL PREDICTION SECTION
+============================================================ -->
+<section class="prediction" id="prediction">
+  <div class="container">
+    <span class="section-tag">Try It Now</span>
+    <h2 class="section-title">Predict Your Electricity Bill</h2>
+    <p class="section-desc">Enter your consumption details below and let our AI model forecast your next bill instantly.</p>
+
+    <div class="prediction-grid">
+      <form class="predict-form reveal" id="predictForm" novalidate>
+        <div class="form-group" id="group-units">
+          <label for="consumedUnits">Consumed Units <span class="unit">(kWh)</span></label>
+          <input type="number" id="consumedUnits" name="consumed_units" placeholder="e.g. 320" min="0" step="0.1" required>
+          <span class="error-msg">Please enter a valid number of units (0 or more).</span>
+        </div>
+
+        <div class="form-group" id="group-bill">
+          <label for="billAmount">Previous Bill Amount <span class="unit">(optional, ₹)</span></label>
+          <input type="number" id="billAmount" name="bill_amount" placeholder="e.g. 1200" min="0" step="0.01">
+          <span class="error-msg">Please enter a valid bill amount.</span>
+        </div>
+
+        <div class="form-group" id="group-members">
+          <label for="familyMembers">Number of Family Members</label>
+          <input type="number" id="familyMembers" name="family_members" placeholder="e.g. 4" min="1" max="20" step="1" required>
+          <span class="error-msg">Please enter a valid number of family members (1 or more).</span>
+        </div>
+
+        <div class="form-group" id="group-hours">
+          <label for="usageHours">Average Usage Hours per Day</label>
+          <input type="number" id="usageHours" name="usage_hours_per_day" placeholder="e.g. 8" min="0" max="24" step="0.1" required>
+          <span class="error-msg">Please enter valid hours (0–24).</span>
+        </div>
+
+        <button type="submit" class="predict-btn" id="predictBtn">
+          <span class="spinner"></span>
+          <span class="btn-label">⚡ PREDICT BILL</span>
+        </button>
+      </form>
+
+      <div class="result-panel reveal">
+        <div class="result-placeholder" id="resultPlaceholder">
+          <div class="ph-icon">📉</div>
+          <p>Fill in your consumption details and click "Predict Bill" to see your AI-powered estimate here.</p>
+        </div>
+
+        <div class="result-content" id="resultContent">
+          <div class="result-amount-box">
+            <div class="label">Predicted Bill Amount</div>
+            <div class="result-amount">₹<span id="resultAmount">0.00</span></div>
+          </div>
+
+          <div class="result-meta-grid">
+            <div class="result-meta-item">
+              <div class="val" id="resultRate">₹0.00</div>
+              <div class="lbl">Avg. Rate / Unit</div>
+            </div>
+            <div class="result-meta-item">
+              <div class="val" id="resultConfidence">0%</div>
+              <div class="lbl">Model Confidence</div>
+            </div>
+          </div>
+
+          <div class="tips-box">
+            <h5>💡 Smart Recommendations</h5>
+            <ul id="resultTips"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HISTORY / CONSUMPTION ANALYSIS SECTION
+============================================================ -->
+<section class="history" id="history">
+  <div class="container">
+    <span class="section-tag">Consumption Analysis</span>
+    <h2 class="section-title">Bill History &amp; Trends</h2>
+    <p class="section-desc">Review your previous electricity bills and see how your consumption has trended over time.</p>
+
+    <div class="history-table-wrap reveal">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Units Consumed</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyTableBody">
+          <tr><td colspan="4" style="text-align:center; color:var(--gray-500);">Loading history…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-wrap reveal">
+      <h4>Monthly Bill &amp; Consumption Trend</h4>
+      <div class="chart-canvas-box">
+        <canvas id="trendChart"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NOTIFICATIONS SECTION
+============================================================ -->
+<section class="notifications" id="notifications">
+  <div class="container">
+    <span class="section-tag">Stay Updated</span>
+    <h2 class="section-title">Notifications</h2>
+    <p class="section-desc">Never miss a due date. Here's what's coming up.</p>
+
+    <div class="notif-list reveal" id="notifList">
+      <div class="notif-card">
+        <div class="notif-icon">🔔</div>
+        <div class="notif-body">
+          <h4>Loading notifications…</h4>
+          <p>Please wait a moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-desc">Have questions about Electric AI? We'd love to hear from you.</p>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="icon-box">📧</div>
+            <div><h4>Email</h4><p>support@electricai.com</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box">📞</div>
+            <div><h4>Phone</h4><p>+91 98765 43210</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box">📍</div>
+            <div><h4>Location</h4><p>Chennai, Tamil Nadu, India</p></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group" id="group-cname">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="name" placeholder="Your full name" required>
+          <span class="error-msg">Please enter your name.</span>
+        </div>
+        <div class="form-group" id="group-cemail">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+          <span class="error-msg">Please enter a valid email address.</span>
+        </div>
+        <div class="form-group" id="group-cmessage">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" placeholder="How can we help you?" required></textarea>
+          <span class="error-msg">Please enter a message.</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        <div class="form-status-msg" id="contactStatusMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <img src="data:image/png;base64,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" alt="Electric AI logo">
+          <span>Electric <span class="highlight">AI</span></span>
+        </a>
+        <p>AI-powered electricity bill prediction and consumption analysis — helping you stay ahead of every bill.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#prediction">Bill Prediction</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#history">Consumption Analysis</a></li>
+          <li><a href="#notifications">Notifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/privacy" id="privacyLink">Privacy Policy</a></li>
+          <li><a href="/terms" id="termsLink">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Volt Electric AI All rights reserved.</span>
+      <div class="legal-links">
+        <a href="/privacy" id="privacyLink2">Privacy Policy</a>
+        <a href="/terms" id="termsLink2">Terms and Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     LOGIN / SIGNUP MODAL
+============================================================ -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalCloseBtn">✕</button>
+    <h3 id="modalTitle">Welcome back</h3>
+    <p class="sub" id="modalSub">Log in to continue or create a new account.</p>
+
+    <div class="auth-mode-switch" role="tablist">
+      <button type="button" class="mode-btn active" id="showLoginBtn">Login</button>
+      <button type="button" class="mode-btn" id="showSignupBtn">Create account</button>
+    </div>
+
+    <form id="authForm" novalidate data-mode="login">
+      <div class="form-group" id="group-auth-name" style="display:none;">
+        <label for="authName">Full Name</label>
+        <input type="text" id="authName" placeholder="Jane Doe">
+        <span class="error-msg">Please enter your full name.</span>
+      </div>
+      <div class="form-group" id="group-auth-email">
+        <label for="authEmail">Email</label>
+        <input type="email" id="authEmail" placeholder="you@example.com" required>
+        <span class="error-msg">Please enter a valid email.</span>
+      </div>
+      <div class="form-group" id="group-auth-password">
+        <label for="authPassword">Password</label>
+        <input type="password" id="authPassword" placeholder="Enter your password" required>
+        <span class="error-msg">Password must be at least 6 characters.</span>
+      </div>
+      <div class="form-group" id="group-auth-confirm" style="display:none;">
+        <label for="authConfirmPassword">Confirm Password</label>
+        <input type="password" id="authConfirmPassword" placeholder="Re-enter password">
+        <span class="error-msg">Passwords do not match.</span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" id="authSubmitBtn">Log in</button>
+    </form>
+
+    <p class="modal-switch">By continuing, you agree to our <a href="/terms" id="termsLink3">Terms</a> &amp; <a href="/privacy" id="privacyLink3">Privacy Policy</a>.</p>
+  </div>
+</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toastIcon">✅</span>
+  <span class="toast-text" id="toastText"></span>
+</div>
+
+<script>
+/* =========================================================
+   Electric AI — Hero Lightning Canvas Animation
+   Draws randomized electric bolts + drifting energy particles
+   in blue and yellow tones across the hero background canvas.
+========================================================= */
+
+(function () {
+  const canvas = document.getElementById("lightningCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+
+  let width, height;
+  const particles = [];
+  const PARTICLE_COUNT = 55;
+  let activeBolt = null;
+  let boltTimer = 0;
+  let nextBoltIn = randRange(90, 220);
+
+  function resize() {
+    const hero = canvas.parentElement;
+    width = canvas.width = hero.offsetWidth;
+    height = canvas.height = hero.offsetHeight;
+  }
+
+  function randRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.r = randRange(1, 2.6);
+      this.speedY = randRange(0.15, 0.5);
+      this.speedX = randRange(-0.15, 0.15);
+      this.alpha = randRange(0.15, 0.6);
+      this.color = Math.random() > 0.5 ? "56,189,248" : "255,209,0";
+      this.pulseSpeed = randRange(0.01, 0.03);
+      this.pulsePhase = Math.random() * Math.PI * 2;
+    }
+    update() {
+      this.y -= this.speedY;
+      this.x += this.speedX;
+      this.pulsePhase += this.pulseSpeed;
+      if (this.y < -10) this.reset(), (this.y = height + 10);
+    }
+    draw() {
+      const flicker = 0.5 + 0.5 * Math.sin(this.pulsePhase);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.color},${this.alpha * flicker})`;
+      ctx.fill();
+    }
+  }
+
+  function initParticles() {
+    particles.length = 0;
+    for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+  }
+
+  // Generates a jagged lightning bolt path between two points
+  function generateBoltPath(x1, y1, x2, y2, displace, segments) {
+    if (segments <= 1 || displace < 2) {
+      return [{ x: x1, y: y1 }, { x: x2, y: y2 }];
+    }
+    const midX = (x1 + x2) / 2 + randRange(-displace, displace);
+    const midY = (y1 + y2) / 2 + randRange(-displace, displace);
+    const left = generateBoltPath(x1, y1, midX, midY, displace / 2, segments - 1);
+    const right = generateBoltPath(midX, midY, x2, y2, displace / 2, segments - 1);
+    return left.concat(right.slice(1));
+  }
+
+  function spawnBolt() {
+    const startX = randRange(width * 0.1, width * 0.9);
+    const startY = randRange(0, height * 0.15);
+    const endX = startX + randRange(-120, 120);
+    const endY = startY + randRange(height * 0.35, height * 0.65);
+    const path = generateBoltPath(startX, startY, endX, endY, 60, 5);
+    const color = Math.random() > 0.5 ? "255,209,0" : "56,189,248";
+    activeBolt = { path, life: 14, maxLife: 14, color };
+  }
+
+  function drawBolt(bolt) {
+    const alpha = bolt.life / bolt.maxLife;
+    ctx.save();
+    ctx.strokeStyle = `rgba(${bolt.color},${alpha})`;
+    ctx.lineWidth = 2;
+    ctx.shadowBlur = 18;
+    ctx.shadowColor = `rgba(${bolt.color},0.9)`;
+    ctx.beginPath();
+    bolt.path.forEach((p, i) => (i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)));
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach((p) => { p.update(); p.draw(); });
+
+    if (activeBolt) {
+      drawBolt(activeBolt);
+      activeBolt.life -= 1;
+      if (activeBolt.life <= 0) activeBolt = null;
+    } else {
+      boltTimer++;
+      if (boltTimer >= nextBoltIn) {
+        spawnBolt();
+        boltTimer = 0;
+        nextBoltIn = randRange(140, 320);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  function start() {
+    resize();
+    initParticles();
+    animate();
+  }
+
+  window.addEventListener("resize", () => {
+    resize();
+  });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();
+
+</script>
+<script>
+/* =========================================================
+   Electric AI — Main Frontend Logic
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  initNav();
+  initRevealOnScroll();
+  initAuthModal();
+  initPredictionForm();
+  initContactForm();
+  loadBillHistory();
+  loadNotifications();
+  initHeaderScrollEffect();
+  checkAuthStatus();
+});
+
+/* ---------------------------------------------------------
+   Toast helper
+--------------------------------------------------------- */
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+  const icon = document.getElementById("toastIcon");
+  const text = document.getElementById("toastText");
+
+  toast.className = "toast " + type;
+  icon.textContent = type === "success" ? "✅" : "⚠️";
+  text.textContent = message;
+
+  requestAnimationFrame(() => toast.classList.add("show"));
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => toast.classList.remove("show"), 4000);
+}
+
+/* ---------------------------------------------------------
+   Navigation (mobile toggle + smooth active link)
+--------------------------------------------------------- */
+function initNav() {
+  const hamburger = document.getElementById("hamburgerBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile-open");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => navLinks.classList.remove("mobile-open"));
+  });
+}
+
+function initHeaderScrollEffect() {
+  const header = document.querySelector(".site-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+      header.style.boxShadow = "0 6px 30px rgba(0,0,0,0.3)";
+    } else {
+      header.style.boxShadow = "none";
+    }
+  });
+}
+
+/* ---------------------------------------------------------
+   Reveal-on-scroll animation
+--------------------------------------------------------- */
+function initRevealOnScroll() {
+  const items = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  items.forEach((item) => observer.observe(item));
+}
+
+/* ---------------------------------------------------------
+   Auth Modal (Login / Sign up)
+--------------------------------------------------------- */
+const AUTH_USERS_KEY = "electric-ai-users";
+const AUTH_SESSION_KEY = "electric-ai-session";
+
+function getStoredUsers() {
+  try {
+    return JSON.parse(localStorage.getItem(AUTH_USERS_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveStoredUsers(users) {
+  localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users));
+}
+
+function getActiveUser() {
+  try {
+    return JSON.parse(localStorage.getItem(AUTH_SESSION_KEY) || "null");
+  } catch {
+    return null;
+  }
+}
+
+function saveActiveUser(user) {
+  localStorage.setItem(AUTH_SESSION_KEY, JSON.stringify(user));
+}
+
+function clearActiveUser() {
+  localStorage.removeItem(AUTH_SESSION_KEY);
+}
+
+function setAuthMode(mode, form) {
+  const nameGroup = document.getElementById("group-auth-name");
+  const confirmGroup = document.getElementById("group-auth-confirm");
+  const submitBtn = document.getElementById("authSubmitBtn");
+  const title = document.getElementById("modalTitle");
+  const sub = document.getElementById("modalSub");
+  const loginToggle = document.getElementById("showLoginBtn");
+  const signupToggle = document.getElementById("showSignupBtn");
+
+  form.dataset.mode = mode;
+  nameGroup.style.display = mode === "signup" ? "block" : "none";
+  confirmGroup.style.display = mode === "signup" ? "block" : "none";
+  submitBtn.textContent = mode === "signup" ? "Create account" : "Log in";
+  title.textContent = mode === "signup" ? "Create your account" : "Welcome back";
+  sub.textContent = mode === "signup"
+    ? "Create an account to save your predictions."
+    : "Log in to continue or create a new account.";
+
+  loginToggle.classList.toggle("active", mode === "login");
+  signupToggle.classList.toggle("active", mode === "signup");
+}
+
+function setAuthFieldError(input, valid) {
+  const group = input.closest(".form-group");
+  group.classList.toggle("invalid", !valid);
+  return valid;
+}
+
+function initAuthModal() {
+  const modal = document.getElementById("authModal");
+  const loginBtn = document.getElementById("loginBtn");
+  const closeBtn = document.getElementById("modalCloseBtn");
+  const authForm = document.getElementById("authForm");
+  const emailInput = document.getElementById("authEmail");
+  const passwordInput = document.getElementById("authPassword");
+  const nameInput = document.getElementById("authName");
+  const confirmInput = document.getElementById("authConfirmPassword");
+  const loginToggle = document.getElementById("showLoginBtn");
+  const signupToggle = document.getElementById("showSignupBtn");
+
+  loginBtn.addEventListener("click", () => {
+    const activeUser = getActiveUser();
+    if (activeUser) {
+      clearActiveUser();
+      updateLoginButton("");
+      showToast("You have been logged out.", "success");
+      return;
+    }
+    setAuthMode("login", authForm);
+    modal.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("active");
+  });
+
+  loginToggle.addEventListener("click", () => setAuthMode("login", authForm));
+  signupToggle.addEventListener("click", () => setAuthMode("signup", authForm));
+
+  authForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const mode = authForm.dataset.mode || "login";
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim().toLowerCase();
+    const password = passwordInput.value.trim();
+    const confirmPassword = confirmInput.value.trim();
+
+    let valid = true;
+    valid = setAuthFieldError(emailInput, validateEmail(email)) && valid;
+    valid = setAuthFieldError(passwordInput, password.length >= 6) && valid;
+
+    if (mode === "signup") {
+      valid = setAuthFieldError(nameInput, name.length >= 2) && valid;
+      valid = setAuthFieldError(confirmInput, confirmPassword === password) && valid;
+    }
+
+    if (!valid) {
+      showToast(mode === "signup" ? "Please complete the form correctly." : "Please enter a valid email and password.", "error");
+      return;
+    }
+
+    const users = getStoredUsers();
+    const emailKey = email.toLowerCase();
+
+    if (mode === "login") {
+      const user = users.find((entry) => entry.email.toLowerCase() === emailKey && entry.password === password);
+      if (!user) {
+        setAuthFieldError(emailInput, false);
+        setAuthFieldError(passwordInput, false);
+        showToast("No account found for that email or password.", "error");
+        return;
+      }
+      saveActiveUser({ id: user.id, name: user.name, email: user.email });
+      updateLoginButton(user.name);
+      modal.classList.remove("active");
+      authForm.reset();
+      setAuthMode("login", authForm);
+      showToast(`Welcome back, ${user.name}!`, "success");
+      return;
+    }
+
+    const existing = users.find((entry) => entry.email.toLowerCase() === emailKey);
+    if (existing) {
+      setAuthFieldError(emailInput, false);
+      showToast("An account with that email already exists.", "error");
+      return;
+    }
+
+    const newUser = { id: Date.now(), name, email, password };
+    users.push(newUser);
+    saveStoredUsers(users);
+    saveActiveUser({ id: newUser.id, name: newUser.name, email: newUser.email });
+    updateLoginButton(newUser.name);
+    modal.classList.remove("active");
+    authForm.reset();
+    setAuthMode("login", authForm);
+    showToast(`Account created for ${newUser.name}!`, "success");
+  });
+}
+
+function updateLoginButton(name) {
+  const btn = document.getElementById("loginBtn");
+  if (name) {
+    btn.textContent = `👤 ${name}`;
+    btn.classList.add("is-logged-in");
+  } else {
+    btn.textContent = "Login / Sign up";
+    btn.classList.remove("is-logged-in");
+  }
+}
+
+function checkAuthStatus() {
+  const user = getActiveUser();
+  if (user) {
+    updateLoginButton(user.name);
+  } else {
+    updateLoginButton("");
+  }
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function buildLocalPrediction(payload) {
+  const units = Number(payload.consumed_units || 0);
+  const previousBill = Number(payload.bill_amount || 0);
+  const members = Number(payload.family_members || 1);
+  const hours = Number(payload.usage_hours_per_day || 0);
+
+  const baseRate = 8.2;
+  const familyFactor = 1 + Math.min(members - 1, 4) * 0.04;
+  const usageFactor = 1 + Math.min(hours / 24, 1) * 0.16;
+  const previousBillFactor = previousBill > 0 ? previousBill * 0.12 : 0;
+
+  const predictedBill = Math.max(units * baseRate * familyFactor * usageFactor + members * 95 + hours * 10 + previousBillFactor, 180);
+  const avgRate = predictedBill / Math.max(units, 1);
+  const confidence = Math.min(0.96, 0.79 + Math.min(0.12, units / 3500 * 0.08) + Math.min(0.05, members * 0.004));
+
+  return {
+    predicted_bill: Number(predictedBill.toFixed(2)),
+    avg_rate_per_unit: Number(avgRate.toFixed(2)),
+    model_confidence_r2: Number(confidence.toFixed(2)),
+    tips: [
+      "Use energy-intensive appliances during off-peak hours when possible.",
+      "Switch off idle devices to reduce standby consumption.",
+      "Consider LED bulbs and efficient cooling settings for better savings."
+    ],
+  };
+}
+
+async function submitPrediction(payload) {
+  try {
+    const res = await fetch("/api/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      throw new Error("Backend prediction unavailable");
+    }
+
+    const data = await res.json();
+    return { data, source: "server" };
+  } catch (error) {
+    const data = buildLocalPrediction(payload);
+    return { data, source: "local" };
+  }
+}
+
+function savePredictionToHistory(entry) {
+  try {
+    const stored = JSON.parse(localStorage.getItem("electric-ai-history") || "[]");
+    stored.unshift(entry);
+    localStorage.setItem("electric-ai-history", JSON.stringify(stored.slice(0, 10)));
+  } catch (error) {
+    /* ignore storage errors */
+  }
+}
+
+/* ---------------------------------------------------------
+   Bill Prediction Form
+--------------------------------------------------------- */
+function initPredictionForm() {
+  const form = document.getElementById("predictForm");
+  const btn = document.getElementById("predictBtn");
+
+  const units = document.getElementById("consumedUnits");
+  const bill = document.getElementById("billAmount");
+  const members = document.getElementById("familyMembers");
+  const hours = document.getElementById("usageHours");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let valid = true;
+    valid = validateField(units, "group-units", (v) => v !== "" && parseFloat(v) >= 0) && valid;
+    valid = validateField(members, "group-members", (v) => v !== "" && parseInt(v) >= 1) && valid;
+    valid = validateField(hours, "group-hours", (v) => v !== "" && parseFloat(v) >= 0 && parseFloat(v) <= 24) && valid;
+    if (bill.value !== "") {
+      valid = validateField(bill, "group-bill", (v) => parseFloat(v) >= 0) && valid;
+    } else {
+      document.getElementById("group-bill").classList.remove("invalid");
+    }
+
+    if (!valid) return;
+
+    btn.classList.add("loading");
+    btn.disabled = true;
+
+    try {
+      const payload = {
+        consumed_units: parseFloat(units.value),
+        bill_amount: bill.value !== "" ? parseFloat(bill.value) : null,
+        family_members: parseInt(members.value),
+        usage_hours_per_day: parseFloat(hours.value),
+      };
+
+      const { data, source } = await submitPrediction(payload);
+      renderPredictionResult(data);
+
+      savePredictionToHistory({
+        bill_date: new Date().toISOString(),
+        units_consumed: payload.consumed_units,
+        amount: data.predicted_bill,
+        status: "Estimated",
+      });
+
+      showToast(source === "server" ? "Bill predicted successfully!" : "Prediction calculated locally.", source === "server" ? "success" : "success");
+    } catch (err) {
+      showToast("Could not calculate prediction. Please try again.", "error");
+    } finally {
+      btn.classList.remove("loading");
+      btn.disabled = false;
+    }
+  });
+}
+
+function validateField(input, groupId, isValidFn) {
+  const group = document.getElementById(groupId);
+  const ok = isValidFn(input.value);
+  group.classList.toggle("invalid", !ok);
+  return ok;
+}
+
+function renderPredictionResult(data) {
+  document.getElementById("resultPlaceholder").style.display = "none";
+  const content = document.getElementById("resultContent");
+  content.classList.add("active");
+
+  animateNumber(document.getElementById("resultAmount"), data.predicted_bill);
+  document.getElementById("resultRate").textContent = `₹${data.avg_rate_per_unit}`;
+  document.getElementById("resultConfidence").textContent = `${Math.round(data.model_confidence_r2 * 100)}%`;
+
+  const tipsList = document.getElementById("resultTips");
+  tipsList.innerHTML = "";
+  data.tips.forEach((tip) => {
+    const li = document.createElement("li");
+    li.textContent = tip;
+    tipsList.appendChild(li);
+  });
+}
+
+function animateNumber(el, target) {
+  const duration = 700;
+  const start = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = (target * eased).toFixed(2);
+    el.textContent = Number(value).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ---------------------------------------------------------
+   Bill History + Chart.js
+--------------------------------------------------------- */
+async function loadBillHistory() {
+  const tbody = document.getElementById("historyTableBody");
+  try {
+    const res = await fetch("/api/history");
+    const data = await res.json();
+    const history = data.history || [];
+
+    if (history.length === 0) {
+      throw new Error("No server history");
+    }
+
+    renderBillHistoryRows(history, tbody);
+  } catch (err) {
+    const storedHistory = JSON.parse(localStorage.getItem("electric-ai-history") || "[]");
+    renderBillHistoryRows(storedHistory, tbody);
+  }
+
+  loadTrendChart();
+}
+
+function renderBillHistoryRows(history, tbody) {
+  if (history.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:var(--gray-500);">No bill history yet.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = history
+    .map(
+      (h) => `
+    <tr>
+      <td>${formatDate(h.bill_date)}</td>
+      <td>${h.units_consumed ?? "-"} kWh</td>
+      <td>₹${Number(h.amount).toLocaleString(undefined, { minimumFractionDigits: 2 })}</td>
+      <td><span class="status-pill ${h.status === "Paid" ? "paid" : h.status === "Estimated" ? "due" : "due"}">${h.status}</span></td>
+    </tr>`
+    )
+    .join("");
+}
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d)) return dateStr;
+  return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+}
+
+let trendChartInstance = null;
+
+async function loadTrendChart() {
+  try {
+    const res = await fetch("/api/consumption-trends");
+    const data = await res.json();
+
+    const ctx = document.getElementById("trendChart").getContext("2d");
+    const labels = (data.labels || []).map(formatDate);
+
+    if (trendChartInstance) trendChartInstance.destroy();
+
+    trendChartInstance = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels.length ? labels : ["No data"],
+        datasets: [
+          {
+            label: "Bill Amount (₹)",
+            data: data.amounts || [],
+            borderColor: "#FFD100",
+            backgroundColor: "rgba(255, 209, 0, 0.15)",
+            tension: 0.4,
+            fill: true,
+            yAxisID: "y",
+            pointBackgroundColor: "#FFD100",
+          },
+          {
+            label: "Units Consumed (kWh)",
+            data: data.units || [],
+            borderColor: "#38BDF8",
+            backgroundColor: "rgba(56, 189, 248, 0.15)",
+            tension: 0.4,
+            fill: true,
+            yAxisID: "y1",
+            pointBackgroundColor: "#38BDF8",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { labels: { color: "#b9c6de" } },
+        },
+        scales: {
+          x: { ticks: { color: "#7c8aa8" }, grid: { color: "rgba(255,255,255,0.05)" } },
+          y: {
+            type: "linear",
+            position: "left",
+            ticks: { color: "#FFD100" },
+            grid: { color: "rgba(255,255,255,0.05)" },
+          },
+          y1: {
+            type: "linear",
+            position: "right",
+            ticks: { color: "#38BDF8" },
+            grid: { drawOnChartArea: false },
+          },
+        },
+      },
+    });
+  } catch (err) {
+    /* chart failure is non-critical */
+  }
+}
+
+/* ---------------------------------------------------------
+   Notifications
+--------------------------------------------------------- */
+async function loadNotifications() {
+  const list = document.getElementById("notifList");
+  try {
+    const res = await fetch("/api/notifications");
+    const data = await res.json();
+    const notifications = data.notifications || [];
+
+    if (notifications.length === 0) {
+      throw new Error("No notifications");
+    }
+
+    renderNotifications(notifications, list);
+  } catch (err) {
+    renderNotifications([
+      { title: "Prediction ready", message: "Your next bill estimate is available now.", amount: null }
+    ], list);
+  }
+}
+
+function renderNotifications(notifications, list) {
+  if (notifications.length === 0) {
+    list.innerHTML = `
+      <div class="notif-card">
+        <div class="notif-icon">✅</div>
+        <div class="notif-body">
+          <h4>You're all caught up!</h4>
+          <p>No pending notifications at the moment.</p>
+        </div>
+      </div>`;
+    return;
+  }
+
+  list.innerHTML = notifications
+    .map(
+      (n) => `
+    <div class="notif-card">
+      <div class="notif-icon">🔔</div>
+      <div class="notif-body">
+        <h4>${escapeHtml(n.title)}</h4>
+        <p>${escapeHtml(n.message)}</p>
+      </div>
+      ${
+        n.amount
+          ? `<div class="notif-meta">
+              <div class="amt">₹${Number(n.amount).toLocaleString(undefined, { minimumFractionDigits: 2 })}</div>
+              <div class="due">Due ${formatDate(n.due_date)}</div>
+            </div>`
+          : ""
+      }
+    </div>`
+    )
+    .join("");
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ---------------------------------------------------------
+   Contact Form
+--------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  const nameInput = document.getElementById("contactName");
+  const emailInput = document.getElementById("contactEmail");
+  const messageInput = document.getElementById("contactMessage");
+  const statusMsg = document.getElementById("contactStatusMsg");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let valid = true;
+    valid = validateField(nameInput, "group-cname", (v) => v.trim().length > 0) && valid;
+    valid = validateField(emailInput, "group-cemail", (v) => validateEmail(v)) && valid;
+    valid = validateField(messageInput, "group-cmessage", (v) => v.trim().length > 0) && valid;
+
+    if (!valid) return;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          message: messageInput.value.trim(),
+        }),
+      });
+      const data = await res.json();
+
+      statusMsg.classList.remove("success", "error");
+      if (res.ok && data.success) {
+        statusMsg.textContent = data.message;
+        statusMsg.classList.add("success", "show");
+        form.reset();
+        showToast("Message sent successfully!", "success");
+      } else {
+        statusMsg.textContent = data.error || "Something went wrong. Please try again.";
+        statusMsg.classList.add("error", "show");
+      }
+      setTimeout(() => statusMsg.classList.remove("show"), 5000);
+    } catch (err) {
+      showToast("Could not send message. Please try again.", "error");
+    }
+  });
+}
+
+</script>
+</body>
+</html>
